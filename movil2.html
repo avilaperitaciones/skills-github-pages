@@ -5,18 +5,18 @@
     <title>Capturar Foto</title>
 </head>
 <body>
-    <h1>Cámara Móvil</h1>
-    <video id="video" width="300" height="300" autoplay></video>
+    <h1>CÃ¡mara MÃ³vil</h1>
+    <video id="video" width="600" height="800" autoplay></video>
     <button id="capture">Capturar Foto</button>
     <canvas id="canvas" style="display:none;"></canvas>
     <script>
-        // Acceder a la cámara
+        // Acceder a la cÃ¡mara
         navigator.mediaDevices.getUserMedia({ video: true })
             .then(function(stream) {
                 document.getElementById('video').srcObject = stream;
             })
             .catch(function(err) {
-                console.log("No se pudo acceder a la cámara: " + err);
+                console.log("No se pudo acceder a la cÃ¡mara: " + err);
             });
 
         // Capturar la foto
