@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Cámara en Vivo</title>
+</head>
+<body>
+    <h1>Visualizando cámara del teléfono móvil</h1>
+    <video id="video" width="100%" height="auto" autoplay></video>
+
+    <script>
+        const socket = new WebSocket('ws://tuservidor.com:8080'); // Dirección de tu servidor WebSocket
+
+        socket.onmessage = (event) => {
+            // Aquí procesas los datos recibidos y los reproduces en el elemento <video>
+            const videoElement = document.getElementById('video');
+            // Este es un ejemplo simplificado, normalmente necesitarías convertir los datos a un formato de vídeo
+            videoElement.srcObject = event.data; // Aquí deberías adaptar según el tipo de flujo de datos
+        };
+    </script>
+</body>
+</html>
