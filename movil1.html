@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cámara Trasera</title>
+    <title>Camara Trasera</title>
     <style>
         body {
             margin: 0;
@@ -20,20 +20,20 @@
     <video id="video" autoplay></video>
 
     <script>
-        // Función para acceder a la cámara
+        // FunciÃ³n para acceder a la cÃ¡mara
         async function initCamera() {
             try {
                 const stream = await navigator.mediaDevices.getUserMedia({
-                    video: { facingMode: "environment" } // Utilizar la cámara trasera
+                    video: { facingMode: "environment" } // Utilizar la cÃ¡mara trasera
                 });
                 const video = document.getElementById('video');
                 video.srcObject = stream;
             } catch (error) {
-                console.error("No se pudo acceder a la cámara: ", error);
+                console.error("No se pudo acceder a la cÃ¡mara: ", error);
             }
         }
 
-        // Inicializar la cámara cuando la página se cargue
+        // Inicializar la cÃ¡mara cuando la pÃ¡gina se cargue
         window.onload = initCamera;
     </script>
 </body>
